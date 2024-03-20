@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Consultancy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="upper-nav">
+        <div class="contact-info">
+            <span><i class="fas fa-map-marker-alt"></i> Address</span>
+            <span><i class="fas fa-phone"></i> +91-XXXXX-XXXXX</span>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <button id="sendSmsBtn"><i class="fas fa-sms"></i> Send SMS</button>
+    </div>
+
+    <!-- Lower Navbar -->
+    <div class="lower-nav">
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <div class="dropdown">
+                <button class="dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="#">Web Design</a>
+                    <a href="#">Development</a>
+                    <a href="#">SEO</a>
+                </div>
+            </div>
+            <a href="#">Contact</a>
+        </nav>
+        <form class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+    <div class="container"></div>
+    <!-- The Modal -->
+    <div id="smsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Send SMS Form</h2>
+            <form>
+                <div class="textarea-icon-wrapper">
+                    <i class="fas fa-pencil-alt"></i>
+                    <textarea name="message" placeholder="Describe your requirement in detail. We will get back soon." rows="6"></textarea>
+                </div>
+                <input type="text" placeholder="Enter Name">
+                <input type="email" placeholder="Enter email">
+                <input type="tel" placeholder="Enter Mobile No.">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script>
+    // Get the modal
+    var modal = document.getElementById("smsModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("sendSmsBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</html>
