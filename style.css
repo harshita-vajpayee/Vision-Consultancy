@@ -202,7 +202,7 @@ textarea::placeholder {
 .sidebar {
     display: none;
     position: fixed;
-    top: -20px;
+    top: -30px;
     left: -200px;
     /* Start off-screen */
     width: 200px;
@@ -211,12 +211,11 @@ textarea::placeholder {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 30px;
-    padding-left: 10px;
 }
 
 .sidebar .logo {
     background-color: #555;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .sidebar h3 {
@@ -226,23 +225,17 @@ textarea::placeholder {
     color: white;
 }
 
-.sidebar a,
-.sidebar .dropdown {
-    font-size: 20px;
-}
-
 .sidebar .logo img {
     max-width: 60px;
     height: auto;
     padding-left: 25px;
-    min-width: 40px;
 }
 
 .sidebar a,
 .sidebar .dropbtn {
     padding: 10px 15px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #fff;
     display: block;
     transition: 0.3s;
@@ -259,7 +252,7 @@ textarea::placeholder {
     font-size: 36px;
     margin-left: 50px;
     color: #fff;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .icon-bar {
