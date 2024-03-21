@@ -211,7 +211,7 @@ textarea::placeholder {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 20px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .sidebar .logo {
