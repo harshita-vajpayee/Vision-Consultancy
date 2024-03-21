@@ -165,6 +165,12 @@ textarea::placeholder {
     font-size: 20px;
 }
 
+.lower-nav .nav-links a:hover,
+.lower-nav .nav-links .dropbtn:hover {
+    color: #555;
+    font-size: 24px;
+}
+
 .lower-nav .logo img {
     height: 65px;
     padding: 0;
@@ -242,7 +248,7 @@ textarea::placeholder {
 }
 
 .sidebar a:hover {
-    color: #f1f1f1;
+    color: #555;
 }
 
 .sidebar .closebtn {
@@ -349,7 +355,6 @@ textarea::placeholder {
     position: absolute;
     top: 50%;
     right: -15px;
-    /* Adjust as needed */
     transform: translateY(-50%);
     border: 5px solid transparent;
     border-top-color: #fff;
@@ -367,28 +372,21 @@ textarea::placeholder {
 }
 
 .dropdown-content a {
-    color: black;
+    color: white;
     padding: 5px 8px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {
+.lower-nav .dropdown-content a:hover {
     color: #34b4d9;
     background-color: white;
+    padding: 5px;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-.dropdown:hover .dropbtn {
-    background-color: #34b4d9;
-    /* Darker blue when hovering over the button */
-}
-
-
-/* Rotate the arrow up when the dropdown is hovered */
 
 .dropdown:hover .dropbtn::after {
     border-top-color: transparent;
