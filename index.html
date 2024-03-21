@@ -25,8 +25,9 @@
 
     <!-- Lower Navbar -->
     <div class="lower-nav">
+
         <div class="logo">
-            <img src="logo.png" alt="Company Logo">
+            <img src="./img/c72f3300-7764-4759-aecd-df247158cf3f.jpg" alt="Company Logo">
         </div>
         <nav class="nav-links">
             <a href="#">Home</a>
@@ -34,17 +35,57 @@
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="#">Web Design</a>
-                    <a href="#">Development</a>
-                    <a href="#">SEO</a>
+                    <a href="#">IT placement
+                    </a>
                 </div>
             </div>
+            <a href="#">Blog</a>
             <a href="#">Contact</a>
         </nav>
         <form class="search-bar">
-            <input type="text" placeholder="Search...">
+            <input type="text" class="search-input" placeholder="Search...">
             <button type="submit"><i class="fas fa-search"></i></button>
         </form>
+
+    </div>
+    <div class="top">
+        <div class="topnav">
+            <div class="menu-icon" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo">
+                <img src="./img/c72f3300-7764-4759-aecd-df247158cf3f.jpg" alt="Company Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search..." style="width: 100px;"><button type="submit" class="search-icon"><i class="fas fa-search"></i></button></div>
+
+        </div>
+        <nav class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+            <div class="logo">
+                <img src="./img/c72f3300-7764-4759-aecd-df247158cf3f.jpg" alt="Company Logo">
+                <h3>Vision Consultancy</h3>
+            </div>
+
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <div class="dropdown">
+                <button class="dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="#">IT placement
+                    </a>
+                </div>
+            </div>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+    <div class="icon-bar">
+        <a class="active" href="#"><i class="fa fa-home"></i></a>
+        <a href="#"><i class="fa fa-search"></i></a>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+        <a href="#"><i class="fa fa-globe"></i></a>
+
     </div>
     <div class="container"></div>
     <!-- The Modal -->
@@ -91,6 +132,23 @@
         if (event.target == modal) {
             modal.style.display = "none";
         }
+    }
+</script>
+<script>
+    function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        if (sidebar.style.left === '0px') {
+            sidebar.style.left = '-250px'; // Hide the sidebar
+        } else {
+            sidebar.style.left = '0'; // Show the sidebar
+            sidebar.style.display = 'block';
+        }
+    }
+
+
+    function closeSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.left = '-250px'; // Hide the sidebar
     }
 </script>
 

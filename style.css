@@ -1,346 +1,479 @@
-        * {
-            margin: auto;
-        }
-        
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        
-        .upper-nav {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .upper-nav .contact-info span,
-        .upper-nav .social-icons a {
-            margin-left: 20px;
-            margin-right: 15px;
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        .upper-nav .social-icons a {
-            font-size: 1.2em;
-        }
-        
-        .upper-nav .contact-info span,
-        .upper-nav .social-icons a {
-            margin-right: 25px;
-            /* Keeps spacing within groups */
-        }
-        /* Style the button */
-        
-        #sendSmsBtn {
-            background-color: #007bff;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            margin-left: 20px;
-        }
-        
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-        }
-        
-        .modal h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .modal-content {
-            background-color: #fefefe;
-            margin: 10% auto;
-            /* 15% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 25%;
-            border-radius: 20px;
-            background-color: #81bdfd;
-        }
-        
-        .modal-content form textarea,
-        .modal-content form input[type="text"],
-        .modal-content form input[type="tel"],
-        .modal-content form input[type="email"],
-        .modal-content form button {
-            width: calc(100% - 20px);
-            margin: 5px 0;
-            border-radius: 10px;
-            border: solid grey;
-            box-sizing: border-box;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-        
-        .modal-content form input[type="text"],
-        .modal-content form input[type="tel"],
-        .modal-content form input[type="email"] {
-            height: 35px;
-        }
-        
-        .textarea-icon-wrapper {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-        }
-        
-        .textarea-icon-wrapper i {
-            position: absolute;
-            top: 10px;
-            left: 5px;
-            color: #8f8e8e;
-            pointer-events: none;
-            padding: 5px;
-        }
-        
-        .textarea-icon-wrapper textarea {
-            padding-left: 30px;
-            box-sizing: border-box;
-            padding-right: 3px;
-        }
-        
-        .modal-content form button:hover {
-            background-color: rgb(0, 60, 255);
-            cursor: pointer;
-            border: solid rgb(0, 60, 255);
-        }
-        
-        .modal-content form button {
-            background-color: #04AA6D;
-            color: white;
-            margin-top: 20px;
-            height: 40px;
-            font-size: 20px;
-            border-radius: 2px;
-            border: solid #04AA6D;
-        }
-        
-        .close {
-            color: black;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        
-        .close:hover,
-        .close:focus {
-            color: rgb(253, 56, 56);
-            text-decoration: none;
-            cursor: pointer;
-        }
-        
-        .lower-nav {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .lower-nav .logo img {
-            height: 50px;
-        }
-        
-        .lower-nav .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1em;
-            margin: 30px;
-        }
-        /* Dropdown Button */
-        
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .dropbtn {
-            background-color: #007bff;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            position: relative;
-            font-size: 1em;
-        }
-        /* Add arrow down */
-        
-        .dropbtn::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: -15px;
-            /* Adjust as needed */
-            transform: translateY(-50%);
-            border: 5px solid transparent;
-            border-top-color: #fff;
-            /* Arrow color */
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #007bff;
-            min-width: 100px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-        
-        .dropdown-content a {
-            color: black;
-            padding: 5px 8px;
-            text-decoration: none;
-            display: block;
-        }
-        
-        .dropdown-content a:hover {
-            color: #007bff;
-            background-color: white;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        .dropdown:hover .dropbtn {
-            background-color: #0056b3;
-            /* Darker blue when hovering over the button */
-        }
-        /* Rotate the arrow up when the dropdown is hovered */
-        
-        .dropdown:hover .dropbtn::after {
-            border-top-color: transparent;
-            border-bottom-color: #fff;
-            /* Arrow turns up */
-            top: 40%;
-            /* Adjust position if needed */
-        }
-        /* Search Bar Styles */
-        
-        .search-bar {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-        
-        .search-bar input[type="text"] {
-            padding: 10px;
-            font-size: 16px;
-            border: 2px solid #007bff;
-            /* Border color */
-            outline: none;
-            border-radius: 20px 0 0 20px;
-            /* Rounded left corners */
-            width: 200px;
-            /* Adjust based on your preference */
-        }
-        
-        .search-bar button {
-            padding: 10px 15px;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            background-color: rgb(39, 184, 20);
-            /* Button color */
-            border-radius: 0 20px 20px 0;
-            /* Rounded right corners */
-            transition: background-color 0.3s ease;
-            /* Smooth transition for hover effect */
-            height: 37px;
-        }
-        
-        .search-bar button:hover {
-            background-color: rgb(27, 110, 27);
-            /* Slightly darker shade on hover */
-        }
-        
-        .search-bar button i {
-            color: white;
-            font-size: 16px;
-            /* Adjust the icon size as needed */
-        }
-        /* Adjusting for the search icon */
-        
-        .search-bar button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 10px;
-            /* Adjust padding to ensure the icon is centered */
-        }
-        /* Responsive adjustment */
-        
-        @media (max-width: 600px) {
-            .upper-nav,
-            .lower-nav {
-                flex-direction: column;
-                text-align: center;
-            }
-            .upper-nav .contact-info,
-            .upper-nav .social-icons,
-            .lower-nav {
-                flex-direction: column;
-            }
-            .nav-links,
-            .search-bar {
-                width: 100%;
-                text-align: center;
-            }
-            .nav-links a,
-            .search-bar {
-                margin: 5px 0;
-            }
-            .search-bar {
-                justify-content: center;
-            }
-            #sendSmsBtn {
-                padding: 6px 10px;
-                font-size: 0.8rem;
-                margin-left: 10px;
-                /* Less margin on smaller screens */
-            }
-        }
-        
-        @media screen and (max-width: 768px) {
-            .modal-content {
-                width: 80%;
-                /* Use more of the screen on medium and small devices */
-                margin: 10% auto;
-                /* Decrease margin from the top for visibility */
-            }
-        }
-        
-        @media screen and (max-width: 480px) {
-            .modal-content {
-                width: 95%;
-                /* Almost full width for very small devices */
-                margin: 10% auto;
-            }
-        }
-        
-        @media screen and (max-width: 480px) {
-            .modal-content form input[type="text"],
-            .modal-content form input[type="tel"],
-            .modal-content form button {
-                font-size: 0.9rem;
-                /* Adjust font size for readability */
-            }
-        }
+* {
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.upper-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper-nav .contact-info span,
+.upper-nav .social-icons a {
+    margin-left: 20px;
+    margin-right: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.upper-nav .social-icons a {
+    font-size: 1.2em;
+}
+
+.upper-nav .contact-info span,
+.upper-nav .social-icons a {
+    margin-right: 25px;
+    /* Keeps spacing within groups */
+}
+
+
+/* Style the button */
+
+#sendSmsBtn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    border-radius: 20px;
+    background-color: #81bdfd;
+}
+
+.modal-content form textarea,
+.modal-content form input[type="text"],
+.modal-content form input[type="tel"],
+.modal-content form input[type="email"],
+.modal-content form button {
+    width: calc(100% - 20px);
+    margin: 5px 0;
+    border-radius: 10px;
+    border: solid grey;
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.modal-content form input[type="text"],
+.modal-content form input[type="tel"],
+.modal-content form input[type="email"] {
+    height: 35px;
+}
+
+.textarea-icon-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.textarea-icon-wrapper i {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    color: #8f8e8e;
+    pointer-events: none;
+    padding: 5px;
+}
+
+.textarea-icon-wrapper textarea {
+    padding-left: 30px;
+    box-sizing: border-box;
+    padding-right: 3px;
+}
+
+.modal-content form button:hover {
+    background-color: rgb(0, 60, 255);
+    cursor: pointer;
+    border: solid rgb(0, 60, 255);
+}
+
+.modal-content form button {
+    background-color: #04AA6D;
+    color: white;
+    margin-top: 20px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 2px;
+    border: solid #04AA6D;
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(253, 56, 56);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.lower-nav {
+    background-color: #34b4d9;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.lower-nav .logo img {
+    height: 65px;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 26px;
+}
+
+.top {
+    display: none;
+}
+
+.topnav {
+    background-color: #34b4d9;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    max-height: 40px;
+}
+
+.top .topnav .logo img {
+    height: 55px;
+    padding-left: 20px;
+    margin: 0;
+    padding-right: 30px;
+    margin-left: 30px;
+}
+
+.sidebar {
+    display: none;
+    position: fixed;
+    top: -20px;
+    left: -200px;
+    /* Start off-screen */
+    width: 150px;
+    height: 100%;
+    background-color: #34b4d9;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+.sidebar .logo {
+    background-color: #555;
+    padding-top: 10px;
+}
+
+.sidebar h3 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    color: white;
+}
+
+.sidebar .logo img {
+    max-width: 60px;
+    height: auto;
+    padding-left: 25px;
+}
+
+.sidebar a,
+.sidebar .dropbtn {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.icon-bar {
+    display: none;
+}
+
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.icon-bar a {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #34b4d9;
+}
+
+
+/* Media query for mobile devices */
+
+@media screen and (max-width: 768px) {
+    .lower-nav,
+    .upper-nav {
+        display: none;
+    }
+    .top {
+        display: block;
+    }
+    .icon-bar {
+        display: block;
+    }
+}
+
+
+/* Ensure logo and search bar align nicely */
+
+.lower-nav .logo,
+.lower-nav .search-bar {
+    flex-grow: 1;
+}
+
+.lower-nav .search-bar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lower-nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 30px;
+}
+
+
+/* Dropdown Button */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #34b4d9;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 1em;
+}
+
+
+/* Add arrow down */
+
+.dropbtn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    /* Adjust as needed */
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+    border-top-color: #fff;
+    /* Arrow color */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #34b4d9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 200px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #34b4d9;
+    background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #34b4d9;
+    /* Darker blue when hovering over the button */
+}
+
+
+/* Rotate the arrow up when the dropdown is hovered */
+
+.dropdown:hover .dropbtn::after {
+    border-top-color: transparent;
+    border-bottom-color: #fff;
+    /* Arrow turns up */
+    top: 40%;
+    /* Adjust position if needed */
+}
+
+
+/* Search Bar Styles */
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #34b4d9;
+    /* Border color */
+    outline: none;
+    border-radius: 20px 0 0 20px;
+    /* Rounded left corners */
+    width: 200px;
+    /* Adjust based on your preference */
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(39, 184, 20);
+    /* Button color */
+    border-radius: 0 20px 20px 0;
+    /* Rounded right corners */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+    height: 37px;
+}
+
+.search-bar button:hover {
+    background-color: rgb(27, 110, 27);
+    /* Slightly darker shade on hover */
+}
+
+.search-bar button i {
+    color: white;
+    font-size: 16px;
+    /* Adjust the icon size as needed */
+}
+
+
+/* Adjusting for the search icon */
+
+.search-bar button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    /* Adjust padding to ensure the icon is centered */
+}
+
+
+/* Responsive adjustment */
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+        /* Use more of the screen on medium and small devices */
+        margin: 10% auto;
+        /* Decrease margin from the top for visibility */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        /* Almost full width for very small devices */
+        margin: 10% auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content form input[type="text"],
+    .modal-content form input[type="tel"],
+    .modal-content form button {
+        font-size: 0.9rem;
+        /* Adjust font size for readability */
+    }
+}
