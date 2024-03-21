@@ -230,6 +230,7 @@ textarea::placeholder {
     max-width: 60px;
     height: auto;
     padding-left: 25px;
+    min-width: 40px;
 }
 
 .sidebar a,
