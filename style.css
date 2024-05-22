@@ -381,16 +381,16 @@ textarea::placeholder {
     .about {
         flex-direction: column;
         padding: 5px;
-        border-radius: 10px;
+        border-radius: 5px;
+        min-width: 600px;
     }
     .about .content {
         margin: auto;
-        padding-right: 0px;
-        width: 320px;
+        padding: 0px;
     }
     .about .content p {
         margin-right: 0px;
-        padding: auto;
+        padding: 0;
         font-size: 20px;
     }
     .about .content h1 {
