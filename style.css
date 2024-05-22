@@ -1,6 +1,7 @@
 * {
     margin: auto;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman';
+    box-sizing: border-box;
 }
 
 body {
@@ -33,6 +34,11 @@ body {
 .upper-nav .social-icons a {
     margin-right: 25px;
     /* Keeps spacing within groups */
+}
+
+.contact-info i {
+    color: #34b4d9;
+    padding-right: 10px;
 }
 
 
@@ -194,7 +200,7 @@ textarea::placeholder {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    max-height: 40px;
+    max-height: 80px;
 }
 
 .top .topnav .logo img {
@@ -291,6 +297,71 @@ textarea::placeholder {
 
 .active {
     background-color: #34b4d9;
+}
+
+
+/*Home*/
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    top: -50px;
+    background-color: #1a8bab;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    max-height: 450px;
+}
+
+.text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.dots {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    margin: 5px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
 }
 
 
@@ -439,18 +510,351 @@ textarea::placeholder {
 .search-bar button i {
     color: white;
     font-size: 16px;
-    /* Adjust the icon size as needed */
 }
-
-
-/* Adjusting for the search icon */
 
 .search-bar button {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 10px;
-    /* Adjust padding to ensure the icon is centered */
+}
+
+.container {
+    background-color: #1a8bab;
+    padding: 50px;
+}
+
+hr {
+    border: 1px solid #fa7a31;
+    margin-left: 10px;
+    width: 15%;
+}
+
+.container h1,
+.container h3 {
+    color: #3481d9;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+}
+
+.about h1 {
+    color: black;
+    padding-top: 20px;
+}
+
+.about .content span {
+    color: #1a8bab;
+}
+
+.about .content,
+.about .image {
+    flex: 1;
+}
+
+.about .content {
+    flex-direction: column;
+    padding-right: 50px;
+    text-align: justify;
+}
+
+.about .content p {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.consultation-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.consultation-button:hover {
+    background-color: #0056b3;
+}
+
+.about .image {
+    margin-right: 100px;
+}
+
+.background-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    /* Adjust the size of the circle */
+    height: 200px;
+    /* Adjust the size of the circle */
+    border-radius: 50%;
+    /* Ensure it's a circle */
+    border: 2px dashed rgba(0, 123, 255, 0.5);
+    /* Transparent dashed border */
+    animation: expandCircle 2s ease-in-out forwards;
+    /* Apply animation */
+}
+
+@keyframes expandCircle {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        /* Start with no circle */
+    }
+    100% {
+        width: 200px;
+        /* Final size of the circle */
+        height: 200px;
+        /* Final size of the circle */
+        opacity: 1;
+        /* Fully visible */
+    }
+}
+
+.services {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.s-heading {
+    text-align: center;
+}
+
+.s-heading h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+
+.s-heading p {
+    color: white;
+    font-size: 1rem;
+    margin: 5px;
+    text-align: center;
+}
+
+.s-box-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px 25px;
+    height: 350px;
+    box-sizing: border-box;
+    margin: 30px;
+    position: relative;
+    background-color: #fff;
+}
+
+.s-box img {
+    height: 75px;
+}
+
+.s-box h1 {
+    color: #576975;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.s-box p {
+    color: rgba(87, 105, 117, 0.90);
+    text-align: center;
+}
+
+.s-btn {
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(74, 144, 226, 0.50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #576975;
+    margin-top: 10px;
+}
+
+.bar {
+    width: 100px;
+    height: 6px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+    background-color: #4a90e2;
+    border-radius: 0px 0px 10px 10px;
+    display: none;
+    animation: bar 0.5s;
+}
+
+.s-box:hover {
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.08);
+    transition: all ease 0.3s;
+}
+
+.s-btn:hover {
+    background-color: #4a90e2;
+    border: 1px solid #4a90e2;
+    color: #FFFFFF;
+    transition: all ease 0.3s;
+}
+
+.s-box:hover h1 {
+    color: #007bff
+}
+
+.s-box:hover .bar {
+    display: block;
+}
+
+@keyframes bar {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+@media(max-width:1050px) {
+    .s-box-container {
+        flex-wrap: wrap;
+    }
+    .services {
+        height: auto;
+    }
+    .s-heading {
+        margin: 15px;
+    }
+    .s-box {
+        flex-grow: 1;
+    }
+}
+
+.enquiry {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    background-image: radial-gradient(circle 700px at 8.6% 27.9%, rgba(239, 183, 192, 0.44) 30%, rgba(62, 147, 252, 0.57) 91.2%);
+    background-color: #fff;
+}
+
+.form,
+.image {
+    flex: 1;
+}
+
+.image {
+    background-color: #f77329;
+    padding: 3px;
+    display: inline-block;
+    margin-right: 0;
+    max-width: 500px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.enquiry form input[type="text"],
+.enquiry form input[type="email"],
+.enquiry form input[type="tel"],
+.enquiry form textarea {
+    width: 100%;
+    margin: 5px 0;
+    box-sizing: border-box;
+    padding: 5px 10px;
+}
+
+.form {
+    padding: 10px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    width: 300px;
+}
+
+.enquiry form h2,
+.enquiry form h1 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #3481d9;
+}
+
+.enquiry hr {
+    border: 1px solid #fa7a31;
+    margin-left: 25px;
+    width: 35%;
+    margin-bottom: 20px;
+}
+
+.name,
+.mail,
+.phone {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.name i,
+.mail i,
+.phone i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: black;
+    pointer-events: none;
+}
+
+.enquiry .textarea-icon-wrapper i {
+    left: 5px;
+    top: 5px;
+    color: black;
+}
+
+.name input[type="text"],
+.mail input[type="email"],
+.phone input[type="tel"],
+.enquiry textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #000;
 }
 
 
@@ -479,5 +883,48 @@ textarea::placeholder {
     .modal-content form button {
         font-size: 0.9rem;
         /* Adjust font size for readability */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center align the flex items */
+        margin: 20px 0;
+        /* Adjust margin for mobile */
+    }
+    .image-content,
+    .text {
+        width: 100%;
+        /* Full width for mobile */
+        margin-right: 0;
+        /* Reset margin-right */
+        display: block;
+        /* Change display to block for stacking */
+    }
+    .image-content {
+        margin-bottom: 20px;
+        /* Adds some space between the image and text */
+    }
+    .about .image-content img {
+        /* Optionally adjust the image size for mobile */
+        width: 100%;
+        /* Make image responsive */
+        max-width: 250px;
+        /* Maximum width of the image */
+        height: auto;
+        /* Maintain aspect ratio */
+        border: 3px solid white;
+        /* Optional: Adjust border size for mobile */
+    }
+    .text {
+        margin-top: 0;
+        /* Reset margin-top */
+    }
+    hr {
+        width: 60%;
+        margin-left: 40px;
     }
 }

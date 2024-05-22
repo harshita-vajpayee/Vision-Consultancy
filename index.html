@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vision Consultancy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Upper Navbar -->
     <div class="upper-nav">
         <div class="contact-info">
-            <span><i class="fas fa-map-marker-alt"></i> Address</span>
-            <span><i class="fas fa-phone"></i> +91-XXXXX-XXXXX</span>
+            <span><i class="fas fa-map-marker-alt"></i> Triveninagar, Pune</span>
+            <span><i class="fas fa-phone"></i> +91- 8007779717</span>
+            <span><i class="fa fa-user-circle"></i> Recruitment | Staffing | Management</span>
         </div>
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -34,8 +35,7 @@
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="#">IT placement
-                    </a>
+                    <a href="#">IT placement</a>
                 </div>
             </div>
             <a href="#">Blog</a>
@@ -45,8 +45,9 @@
             <input type="text" class="search-input" placeholder="Search...">
             <button type="submit"><i class="fas fa-search"></i></button>
         </form>
-
     </div>
+
+    <!-- Top Navbar -->
     <div class="top">
         <div class="topnav">
             <div class="menu-icon" onclick="toggleSidebar()">
@@ -56,8 +57,9 @@
                 <img src="./img/c72f3300-7764-4759-aecd-df247158cf3f.jpg" alt="Company Logo">
             </div>
             <div class="search-bar">
-                <input type="text" class="search-input" placeholder="Search..." style="width: 100px;"><button type="submit" class="search-icon"><i class="fas fa-search"></i></button></div>
-
+                <input type="text" class="search-input" placeholder="Search..." style="width: 100px;">
+                <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
+            </div>
         </div>
         <nav class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
@@ -65,90 +67,227 @@
                 <img src="./img/c72f3300-7764-4759-aecd-df247158cf3f.jpg" alt="Company Logo">
                 <h3>Vision Consultancy</h3>
             </div>
-
             <a href="#">Home</a>
             <a href="#">About Us</a>
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="#">IT placement
-                    </a>
+                    <a href="#">IT placement</a>
                 </div>
             </div>
             <a href="#">Blog</a>
             <a href="#">Contact</a>
         </nav>
     </div>
+
+    <!-- Bottom Navbar -->
     <div class="icon-bar">
         <a class="active" href="#"><i class="fa fa-home"></i></a>
         <a href="#"><i class="fa fa-search"></i></a>
         <a href="#"><i class="fa fa-envelope"></i></a>
         <a href="#"><i class="fa fa-globe"></i></a>
-
     </div>
-    <div class="container"></div>
-    <!-- The Modal -->
-    <div id="smsModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Send SMS Form</h2>
-            <form>
-                <div class="textarea-icon-wrapper">
-                    <i class="fas fa-pencil-alt"></i>
-                    <textarea name="message" placeholder="Describe your requirement in detail. We will get back soon." rows="6"></textarea>
+
+    <div class="container">
+        <div class="home">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide" data-text="Image 1 Description">
+                        <img src="./img/Resource-Management.jpeg" alt="Image 1">
+                        <div class="text">Management
+                            <p>We Value your Time</p>
+                        </div>
+                    </div>
+                    <div class="slide" data-text="Image 2 Description">
+                        <img src="./img/bigstock-Job-Recruiting-Employment-Com-387232282.jpg" alt="Image 2">
+                        <div class="text">Recruitment
+                            <p>Our Aim is Right Person at Right Place at Right Time at Right Cost</p>
+                        </div>
+                    </div>
+
                 </div>
-                <input type="text" placeholder="Enter Name">
-                <input type="email" placeholder="Enter email">
-                <input type="tel" placeholder="Enter Mobile No.">
-                <button type="submit">Send</button>
-            </form>
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="background-circle"></div>
+            <div class="content">
+                <h2>About</h2>
+
+                <h1><span>VISION SERVICES</span> is emerging as a leader in the next phase of HR consultancy</h1>
+                <p>VISION SERVICES, we adopt a systematic and structured approach to meet the Business Goals & HR needs of our clients, combined with a very effective form of matrix evaluation process, Competency Mapping, Gap Analysis & Training. The result
+                    is effective services that are On Plan, On Time, and On Budget. And our psychometric evaluation & Aptitude tests processes make sure our candidates and HR services are the best.</p>
+                <button class="consultation-button">Ask for Consultation</button>
+            </div>
+            <div class="image">
+                <img src="./img/Placement.jpg" alt="">
+            </div>
+        </div>
+        <div class="services">
+            <div class="s-heading">
+                <h1>Services</h1>
+                <p>We Provide The Best In Class Servies For Our Customers</p>
+            </div>
+            <!--services-box-container------------------->
+            <div class="s-box-container">
+                <!--service-box-1---------------->
+                <div class="s-box">
+                    <!--top-bar-------->
+                    <div class="bar"></div>
+                    <!--img---------->
+                    <img alt="1" src="./img/images (1).jfif" width="130px" height="auto" />
+                    <!--servies-name---------->
+                    <h1>Recruitment</h1>
+                    <!--details------>
+                    <p>Help wanted seeking business students interested u=in finding success</p>
+                    <!--btn---------->
+                    <a class=" s-btn " href="# ">More</a>
+                </div>
+                <!--service-box-1---------------->
+                <div class="s-box ">
+                    <!--top-bar-------->
+                    <div class="bar "></div>
+                    <!--img---------->
+                    <img alt="2 " src="./img/images.png" />
+                    <!--servies-name---------->
+                    <h1>Staffing</h1>
+                    <!--details------>
+                    <p>Your Transition into the professional World Begins Here!</p>
+                    <!--btn---------->
+                    <a class="s-btn " href="# ">More</a>
+                </div>
+                <!--service-box-3---------------->
+                <div class="s-box ">
+                    <!--top-bar-------->
+                    <div class="bar "></div>
+                    <!--img---------->
+                    <img alt="3 " src="./img//images (1).png" />
+                    <!--servies-name---------->
+                    <h1>Management</h1>
+                    <!--details------>
+                    <p>Good Management is the art of solving problems so interesting candidate hurry!</p>
+                    <!--btn---------->
+                    <a class="s-btn " href="# ">More</a>
+                </div>
+            </div>
+        </div>
+        <div class="enquiry ">
+            <div class="form ">
+                <form action="# ">
+                    <h1>Quick Enquiry</h1>
+                    <hr>
+                    <div class="name " style="position: relative; display: inline-block; ">
+                        <i class="fa fa-user " aria-hidden="true "></i>
+                        <input type="text " placeholder="Your Name " style="padding-left: 40px; ">
+                    </div>
+                    <h2>Contact Information</h2>
+                    <div class="mail ">
+                        <i class="fa fa-envelope " aria-hidden="true "></i>
+                        <input type="email " placeholder="Your Email " style=" padding-left: 40px; ">
+                    </div>
+                    <div class="phone ">
+                        <i class="fa fa-phone " aria-hidden="true "></i>
+                        <input type="tel " placeholder="Your mobile number " style="padding-left: 40px; ">
+                    </div>
+                    <div class="textarea-icon-wrapper ">
+                        <i class="fas fa-pencil-alt "></i>
+                        <textarea name="message " cols="30 " rows="10 " placeholder="Your message...... " style="padding-left: 20px; "></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="image ">
+                <img src="./img/Contact-Us-Vector-Illustration-Part-02-1-1024x768.jpg " alt="Contact Us ">
+            </div>
         </div>
     </div>
 
-</body>
-<script>
-    // Get the modal
-    var modal = document.getElementById("smsModal");
+    <!-- The Modal -->
+    <div id="smsModal " class="modal ">
+        <div class="modal-content ">
+            <span class="close ">&times;</span>
+            <h2>Send SMS Form</h2>
+            <form>
+                <div class="textarea-icon-wrapper ">
+                    <i class="fas fa-pencil-alt "></i>
+                    <textarea name="message " placeholder="Describe your requirement in detail. We will get back soon. " rows="6 "></textarea>
+                </div>
+                <input type="text " placeholder="Enter Name ">
+                <input type="email " placeholder="Enter email ">
+                <input type="tel " placeholder="Enter Mobile No. ">
+                <button type="submit ">Send</button>
+            </form>
+        </div>
+    </div>
+    </div>
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("sendSmsBtn");
+    <script>
+        // Modal functionality
+        var modal = document.getElementById("smsModal ");
+        var btn = document.getElementById("sendSmsBtn ");
+        var span = document.getElementsByClassName("close ")[0];
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        btn.onclick = function() {
+            modal.style.display = "block ";
         }
-    }
-</script>
-<script>
-    function toggleSidebar() {
-        const sidebar = document.querySelector('.sidebar');
-        if (sidebar.style.left === '0px') {
+
+        span.onclick = function() {
+            modal.style.display = "none ";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none ";
+            }
+        }
+
+        // Sidebar functionality
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px'; // Hide the sidebar
+            } else {
+                sidebar.style.left = '0'; // Show the sidebar
+                sidebar.style.display = 'block';
+            }
+        }
+
+        function closeSidebar() {
+            const sidebar = document.querySelector('.sidebar');
             sidebar.style.left = '-250px'; // Hide the sidebar
-        } else {
-            sidebar.style.left = '0'; // Show the sidebar
-            sidebar.style.display = 'block';
         }
-    }
 
+        // Slider functionality
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
 
-    function closeSidebar() {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.style.left = '-250px'; // Hide the sidebar
-    }
-</script>
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(${(i - index) * 100}%)`;
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentIndex);
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</body>
 
 </html>
