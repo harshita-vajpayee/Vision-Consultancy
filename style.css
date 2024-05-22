@@ -383,7 +383,7 @@ textarea::placeholder {
         padding: 5px;
         border-radius: 5px !important;
         min-width: 400px;
-        margin-right: 0px;
+        margin-left: 0px;
     }
     .about .content {
         margin: auto;
