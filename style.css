@@ -386,6 +386,8 @@ textarea::placeholder {
         padding: 5px;
         border-radius: 5px !important;
         margin-left: 0px !important;
+        width: calc(100% - 10px);
+        /* Full width minus margin */
         margin: 5px auto;
     }
     .about .content {
