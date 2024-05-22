@@ -387,6 +387,7 @@ textarea::placeholder {
         border-radius: 5px !important;
         min-width: 400px;
         margin-left: 0px;
+        left: -20px;
     }
     .about .content {
         margin: auto;
