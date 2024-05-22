@@ -385,21 +385,20 @@ textarea::placeholder {
         flex-direction: column;
         padding: 5px;
         border-radius: 5px !important;
-        min-width: 400px;
-        margin-left: 0px;
-        left: -20px;
+        margin-left: 0px !important;
+        margin: 5px auto;
     }
     .about .content {
-        margin: auto;
+        margin: 5px;
         padding: 0px;
     }
     .about .content p {
         margin-right: 0px;
         padding: 0;
-        font-size: 20px;
+        font-size: 18px;
     }
     .about .content h1 {
-        font-size: 26px;
+        font-size: 24px;
     }
     .about .image img {
         display: none;
