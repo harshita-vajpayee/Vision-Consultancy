@@ -369,7 +369,8 @@ textarea::placeholder {
 
 @media screen and (max-width: 768px) {
     .container {
-        padding: 5px;
+        padding: 0px;
+        margin: 0px;
     }
     .lower-nav,
     .upper-nav {
@@ -386,23 +387,25 @@ textarea::placeholder {
         padding: 5px;
         border-radius: 5px !important;
         margin-left: 0px !important;
-        width: calc(100% - 10px);
+        width: calc(100% - 10px) !important;
         /* Full width minus margin */
         margin: 5px auto;
     }
     .about .content {
-        margin: 5px;
-        padding: 0px;
+        margin-right: 0px;
+        padding-right: 0px;
+        padding-left: 10px;
     }
     .about .content p {
         margin-right: 0px;
-        padding: 0;
         font-size: 18px;
+        padding-right: 0px;
+        min-width: 260px;
     }
     .about .content h1 {
         font-size: 24px;
     }
-    .about .image img {
+    .about .image {
         display: none;
     }
 }
