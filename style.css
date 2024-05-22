@@ -368,6 +368,9 @@ textarea::placeholder {
 /* Media query for mobile devices */
 
 @media screen and (max-width: 768px) {
+    .container {
+        margin: 5px;
+    }
     .lower-nav,
     .upper-nav {
         display: none;
