@@ -390,6 +390,7 @@ textarea::placeholder {
         width: calc(100% - 10px) !important;
         /* Full width minus margin */
         margin: 5px auto;
+        box-sizing: border-box;
     }
     .about .content {
         margin-right: 0px;
