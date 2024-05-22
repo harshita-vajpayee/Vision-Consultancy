@@ -381,8 +381,9 @@ textarea::placeholder {
     .about {
         flex-direction: column;
         padding: 5px;
-        border-radius: 5px;
-        min-width: 600px;
+        border-radius: 5px !important;
+        min-width: 400px;
+        margin-right: 0px;
     }
     .about .content {
         margin: auto;
