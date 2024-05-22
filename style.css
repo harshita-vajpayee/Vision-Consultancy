@@ -384,7 +384,6 @@ textarea::placeholder {
     }
     .about {
         flex-direction: column;
-        padding: 5px;
         border-radius: 5px !important;
         margin-left: 0px !important;
         width: calc(100% - 10px) !important;
@@ -396,13 +395,13 @@ textarea::placeholder {
     .about .content {
         margin-right: 0px;
         padding-right: 0px;
-        padding-left: 10px;
+        padding-left: 0px;
     }
     .about .content p {
         margin-right: 0px;
         font-size: 18px;
         padding-right: 0px;
-        min-width: 260px;
+        min-width: 280px;
     }
     .about .content h1 {
         font-size: 24px;
