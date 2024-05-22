@@ -378,6 +378,28 @@ textarea::placeholder {
     .icon-bar {
         display: block;
     }
+    .about {
+        flex-direction: column;
+        margin-right: 0px;
+        padding-right: 0px;
+        margin: auto;
+    }
+    .about .content {
+        margin: auto;
+        padding-right: 0px;
+        width: 320px;
+    }
+    .about .content p {
+        margin-right: 0px;
+        padding: auto;
+        font-size: 20px;
+    }
+    .about .content h1 {
+        font-size: 26px;
+    }
+    .about .image img {
+        display: none;
+    }
 }
 
 
