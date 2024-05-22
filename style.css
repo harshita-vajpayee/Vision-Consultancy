@@ -369,7 +369,7 @@ textarea::placeholder {
 
 @media screen and (max-width: 768px) {
     .container {
-        margin: 5px;
+        padding: 5px;
     }
     .lower-nav,
     .upper-nav {
