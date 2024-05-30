@@ -90,25 +90,25 @@
 
     <div class="container">
         <div class="home">
-            <div class="slider">
-                <div class="slides">
-                    <div class="slide" data-text="Image 1 Description">
-                        <img src="./img/Resource-Management.jpeg" alt="Image 1">
-                        <div class="text">Management
-                            <p>We Value your Time</p>
-                        </div>
-                    </div>
-                    <div class="slide" data-text="Image 2 Description">
-                        <img src="./img/bigstock-Job-Recruiting-Employment-Com-387232282.jpg" alt="Image 2">
-                        <div class="text">Recruitment
-                            <p>Our Aim is Right Person at Right Place at Right Time at Right Cost</p>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="slider-wrapper">
                 <div class="dots">
-                    <span class="dot" onclick="currentSlide(0)"></span>
-                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="slides">
+                    <h1>Recruitment</h1>
+                    <p>Our Aim is Right Person at Right Place at Right Time at Right Cost</p>
+                    <img src="./img/bigstock-Job-Recruiting-Employment-Com-387232282.jpg" alt="nature">
+                </div>
+                <div class="slides">
+                    <h1>Management</h1>
+                    <p>We Value your Time</p>
+                    <img src="./img/Resource-Management.jpeg" alt="nature">
+                </div>
+                <div class="slides">
+                    <h1>Image 3</h1>
+                    <img src="./img/recruitment-selection.jpg" alt="nature">
                 </div>
             </div>
         </div>
@@ -258,36 +258,66 @@
             const sidebar = document.querySelector('.sidebar');
             sidebar.style.left = '-250px'; // Hide the sidebar
         }
-
-        // Slider functionality
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.style.transform = `translateX(${(i - index) * 100}%)`;
-            });
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
-            currentIndex = index;
-        }
-
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % slides.length;
-            showSlide(currentIndex);
-        }
-
-        function currentSlide(index) {
-            showSlide(index);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            showSlide(currentIndex);
-            setInterval(nextSlide, 5000);
-        });
     </script>
+    <script>
+        const slides = document.querySelectorAll('.slides');
+        const dots = document.querySelectorAll('.dot')
+
+
+        let index = 0;
+
+        // Adding opacity to first dot on first time
+
+        dots[0].style.opacity = '1'
+
+        // positioning the slides
+
+        slides.forEach((slide, index) => {
+            slide.style.left = `${index*100}%`
+        });
+
+
+        // move slide function
+
+        const moveSlide = () => {
+            slides.forEach((slide) => {
+                slide.style.transform = `translateX(-${index*100}%)`;
+            });
+        }
+
+        // remove dots opacity 1 from all dots
+
+        const removeDotsOpacity = () => {
+            dots.forEach((dot) => {
+                dot.style.opacity = '.2';
+            });
+        }
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener("click", (e) => {
+                index = i;
+                removeDotsOpacity();
+                e.target.style.opacity = '1'
+                moveSlide();
+            })
+        });
+
+        // auto play slide
+
+        const autoPlaySlide = () => {
+            removeDotsOpacity();
+            if (index === slides.length - 1) index = -1;
+            index++;
+            dots[index].style.opacity = '1'
+            moveSlide();
+        }
+
+        window.onload = () => {
+            setInterval(autoPlaySlide, 6000);
+        }
+    </script>
+
+
 </body>
 
 </html>
